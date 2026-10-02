@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --cyber-black: #030712;
+    --cyber-deep: #060d1d;
+    --cyber-navy: #0b1528;
+    --cyber-blue: #00d2ff;
+    --cyber-glow: #0099ff;
+    --cyber-accent: #3b82f6;
+  }
+
+  body {
+    background-color: #030712;
+    color: #e2e8f0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Futuristic Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #060d1d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0284c7;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00d2ff;
+  box-shadow: 0 0 10px #00d2ff;
+}
+
+/* Glowing Neon Utilities */
+.neon-glow-blue {
+  box-shadow: 0 0 15px rgba(0, 210, 255, 0.4), inset 0 0 15px rgba(0, 210, 255, 0.2);
+}
+
+.neon-glow-blue-lg {
+  box-shadow: 0 0 30px rgba(0, 210, 255, 0.6), 0 0 60px rgba(0, 153, 255, 0.3), inset 0 0 20px rgba(0, 210, 255, 0.3);
+}
+
+.neon-border {
+  border: 1px solid rgba(0, 210, 255, 0.3);
+}
+
+.neon-border:hover, .neon-border:focus-within {
+  border-color: rgba(0, 210, 255, 0.8);
+  box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
+}
+
+.text-glow {
+  text-shadow: 0 0 10px rgba(0, 210, 255, 0.7), 0 0 20px rgba(0, 153, 255, 0.5);
+}
+
+/* Cyber Grid Background */
+.cyber-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 210, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 210, 255, 0.05) 1px, transparent 1px);
+}
+
+.cyber-radial-bg {
+  background: radial-gradient(circle at 50% 30%, #0c2044 0%, #060e20 50%, #030712 100%);
+}
+
+/* Sci-fi Animations */
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spinReverseSlow {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+    filter: drop-shadow(0 0 15px rgba(0, 210, 255, 0.6));
+  }
+  50% {
+    transform: scale(1.06);
+    opacity: 1;
+    filter: drop-shadow(0 0 35px rgba(0, 210, 255, 0.9));
+  }
+}
+
+@keyframes waveBar {
+  0%, 100% { height: 8px; }
+  50% { height: 36px; }
+}
+
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(1000%); }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 16s linear infinite;
+}
+
+.animate-spin-reverse {
+  animation: spinReverseSlow 12s linear infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+.animate-wave-1 { animation: waveBar 0.8s ease-in-out infinite 0.1s; }
+.animate-wave-2 { animation: waveBar 0.8s ease-in-out infinite 0.2s; }
+.animate-wave-3 { animation: waveBar 0.8s ease-in-out infinite 0.3s; }
+.animate-wave-4 { animation: waveBar 0.8s ease-in-out infinite 0.4s; }
+.animate-wave-5 { animation: waveBar 0.8s ease-in-out infinite 0.5s; }
+.animate-wave-6 { animation: waveBar 0.8s ease-in-out infinite 0.6s; }
+.animate-wave-7 { animation: waveBar 0.8s ease-in-out infinite 0.7s; }
